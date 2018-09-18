@@ -1,0 +1,21 @@
+//
+//  PrefixHeaderINS.pch
+//  INSValores
+//
+//  Created by Novacomp on 5/8/17.
+//  Copyright © 2017 Novacomp. All rights reserved.
+//
+
+#ifndef PrefixHeaderINS_pch
+#define PrefixHeaderINS_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "GAITrackedViewController.h" //Goole analytics
+#import "GAI.h"
+#import "GAIDictionaryBuilder.h"
+#import "Reachability.h"
+
+
+#endif /* PrefixHeaderINS_pch */

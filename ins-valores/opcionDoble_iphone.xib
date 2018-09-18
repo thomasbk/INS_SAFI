@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="opcionDoble_iphone">
+            <connections>
+                <outlet property="iconoLeft" destination="gz4-bl-fhp" id="isO-QG-d23"/>
+                <outlet property="iconoRight" destination="0pW-x9-Imp" id="7bK-wp-tmt"/>
+                <outlet property="leftView" destination="I0Y-8e-jYj" id="AD4-wF-br3"/>
+                <outlet property="mainView" destination="PXH-fz-ese" id="ege-at-Zk1"/>
+                <outlet property="rightView" destination="p93-YJ-nX5" id="N6R-Wb-Lxi"/>
+                <outlet property="tituloLeft" destination="gon-UI-GqV" id="XgA-aa-6OR"/>
+                <outlet property="tituloRight" destination="zsO-9x-ceC" id="1X3-J4-DLo"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="145"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXH-fz-ese">
+                    <rect key="frame" x="10" y="0.0" width="300" height="145"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0Y-8e-jYj">
+                            <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gz4-bl-fhp">
+                                    <rect key="frame" x="47" y="74" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gon-UI-GqV">
+                                    <rect key="frame" x="10" y="20" width="125" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="145" id="MMa-M1-e8c"/>
+                                <constraint firstAttribute="height" constant="145" id="gxZ-o1-vyP"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="ExB-iA-qcf" appends="YES" id="Wan-EO-fuK"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p93-YJ-nX5">
+                            <rect key="frame" x="155" y="0.0" width="145" height="145"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0pW-x9-Imp">
+                                    <rect key="frame" x="47" y="74" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsO-9x-ceC">
+                                    <rect key="frame" x="10" y="20" width="125" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="145" id="aYq-zM-GLk"/>
+                                <constraint firstAttribute="height" constant="145" id="bLV-Z1-Pdk"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="KWq-dn-40G" appends="YES" id="5Oz-G9-HcQ"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="I0Y-8e-jYj" firstAttribute="leading" secondItem="PXH-fz-ese" secondAttribute="leading" id="Cn3-3h-YKU"/>
+                        <constraint firstAttribute="width" constant="300" id="MbH-lv-3Le"/>
+                        <constraint firstAttribute="trailing" secondItem="p93-YJ-nX5" secondAttribute="trailing" id="SLA-0M-lrz"/>
+                        <constraint firstItem="I0Y-8e-jYj" firstAttribute="top" secondItem="PXH-fz-ese" secondAttribute="top" id="bSU-wd-9eO"/>
+                        <constraint firstItem="p93-YJ-nX5" firstAttribute="top" secondItem="PXH-fz-ese" secondAttribute="top" id="noY-mY-V2s"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="PXH-fz-ese" secondAttribute="bottom" id="Kjv-iG-h9v"/>
+                <constraint firstItem="PXH-fz-ese" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Lal-ln-1rD"/>
+                <constraint firstItem="PXH-fz-ese" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TBu-hf-NF8"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-3" y="87.5"/>
+        </view>
+        <tapGestureRecognizer id="ExB-iA-qcf">
+            <connections>
+                <action selector="clicOpcionLeft:" destination="-1" id="Ped-1b-Icp"/>
+                <outlet property="delegate" destination="I0Y-8e-jYj" id="0Fg-28-mAD"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="KWq-dn-40G">
+            <connections>
+                <action selector="clicOpcionRight:" destination="-1" id="m1u-C7-8Wx"/>
+                <outlet property="delegate" destination="p93-YJ-nX5" id="Eje-dd-3B5"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

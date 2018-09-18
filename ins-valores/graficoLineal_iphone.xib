@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="graficoLineal_iphone">
+            <connections>
+                <outlet property="dateSelector" destination="dUG-XR-lhg" id="lhb-Z9-W2t"/>
+                <outlet property="grafico" destination="qBw-Nt-k3c" id="g9S-Tl-ms7"/>
+                <outlet property="typeDateSelector" destination="Vwa-YJ-IDD" id="Op4-AS-a8I"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="390"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vwa-YJ-IDD">
+                    <rect key="frame" x="10" y="12" width="300" height="29"/>
+                    <segments>
+                        <segment title="Por período"/>
+                        <segment title="Por rango"/>
+                    </segments>
+                    <connections>
+                        <action selector="actualizarFormaFecha:" destination="-1" eventType="valueChanged" id="7eF-aa-og5"/>
+                    </connections>
+                </segmentedControl>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dUG-XR-lhg">
+                    <rect key="frame" x="10" y="50" width="300" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="eGp-uc-oEh"/>
+                    </constraints>
+                    <segments>
+                        <segment title="1 Mes"/>
+                        <segment title="3 Meses"/>
+                        <segment title="6 Meses"/>
+                        <segment title="1 Año"/>
+                    </segments>
+                    <connections>
+                        <action selector="actualizarFechaLlamado:" destination="-1" eventType="valueChanged" id="PkX-qL-bsg"/>
+                    </connections>
+                </segmentedControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBw-Nt-k3c" customClass="BEMSimpleLineGraphView">
+                    <rect key="frame" x="0.0" y="93" width="320" height="280"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="rfQ-jQ-jj8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dUG-XR-lhg" secondAttribute="trailing" constant="10" id="98P-zQ-lxr"/>
+                <constraint firstItem="dUG-XR-lhg" firstAttribute="top" secondItem="Vwa-YJ-IDD" secondAttribute="bottom" constant="10" id="CeK-1u-vxD"/>
+                <constraint firstItem="Vwa-YJ-IDD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="Hd1-k0-0cx"/>
+                <constraint firstAttribute="trailing" secondItem="Vwa-YJ-IDD" secondAttribute="trailing" constant="10" id="Pzc-mn-vZC"/>
+                <constraint firstItem="dUG-XR-lhg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="YFA-xW-rSI"/>
+                <constraint firstItem="qBw-Nt-k3c" firstAttribute="top" secondItem="dUG-XR-lhg" secondAttribute="bottom" constant="15" id="cFy-um-qL9"/>
+                <constraint firstItem="dUG-XR-lhg" firstAttribute="top" secondItem="Vwa-YJ-IDD" secondAttribute="bottom" constant="10" id="gIG-4E-sjm"/>
+                <constraint firstItem="Vwa-YJ-IDD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="jEW-Ls-D9e"/>
+                <constraint firstItem="qBw-Nt-k3c" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qFm-uC-eti"/>
+                <constraint firstAttribute="trailing" secondItem="qBw-Nt-k3c" secondAttribute="trailing" id="vZg-aA-ply"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

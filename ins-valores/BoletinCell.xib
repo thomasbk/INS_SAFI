@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="boletin_cell_iphone" id="KGk-i7-Jjw" customClass="BoletinCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="74.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo boletin" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7RV-UL-l4e">
+                        <rect key="frame" x="55" y="17.5" width="238" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="6ya-nP-5l9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boletin" translatesAutoresizingMaskIntoConstraints="NO" id="9YW-Gk-TxT">
+                        <rect key="frame" x="15" y="25" width="25" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="2B9-i5-Ocn"/>
+                            <constraint firstAttribute="height" constant="24" id="6TW-5c-VPK"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPN-vw-eo5">
+                        <rect key="frame" x="0.0" y="73" width="320" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="tmk-Ig-uVO"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flecha_gris" translatesAutoresizingMaskIntoConstraints="NO" id="iwS-zV-xUM">
+                        <rect key="frame" x="298" y="28.5" width="12" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="Xsb-Bu-iOl"/>
+                            <constraint firstAttribute="height" constant="18" id="aLR-hU-Yh2"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="iwS-zV-xUM" secondAttribute="trailing" constant="10" id="Avd-zx-HEC"/>
+                    <constraint firstItem="7RV-UL-l4e" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Bh0-vb-viV"/>
+                    <constraint firstAttribute="trailing" secondItem="WPN-vw-eo5" secondAttribute="trailing" id="LOr-Hs-Xez"/>
+                    <constraint firstItem="7RV-UL-l4e" firstAttribute="leading" secondItem="9YW-Gk-TxT" secondAttribute="trailing" constant="15" id="RWa-us-xc7"/>
+                    <constraint firstItem="9YW-Gk-TxT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="TZ4-S1-zJE"/>
+                    <constraint firstItem="9YW-Gk-TxT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="WpS-OS-eg3"/>
+                    <constraint firstItem="iwS-zV-xUM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Z4K-8r-rgw"/>
+                    <constraint firstItem="WPN-vw-eo5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="g7L-6p-x9G"/>
+                    <constraint firstItem="iwS-zV-xUM" firstAttribute="leading" secondItem="7RV-UL-l4e" secondAttribute="trailing" constant="5" id="ipg-Ia-Vph"/>
+                    <constraint firstAttribute="bottom" secondItem="WPN-vw-eo5" secondAttribute="bottom" id="uuB-8Y-RWb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lineaInferior" destination="WPN-vw-eo5" id="gKK-VV-nzt"/>
+                <outlet property="tituloTipo" destination="7RV-UL-l4e" id="FHF-d9-RT5"/>
+            </connections>
+            <point key="canvasLocation" x="21" y="153.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="boletin" width="53" height="50"/>
+        <image name="flecha_gris" width="12" height="18"/>
+    </resources>
+</document>

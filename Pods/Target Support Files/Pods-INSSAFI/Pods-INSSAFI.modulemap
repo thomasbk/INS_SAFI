@@ -1,0 +1,6 @@
+framework module Pods_INSSAFI {
+  umbrella header "Pods-INSSAFI-umbrella.h"
+
+  export *
+  module * { export * }
+}

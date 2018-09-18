@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="detallePortafolio_iphone">
+            <connections>
+                <outlet property="coinSelector" destination="yWy-5L-R9h" id="UZp-AR-2FB"/>
+                <outlet property="dateSelector" destination="qH9-1L-kKs" id="9UM-Tq-jeA"/>
+                <outlet property="graficoRendimiento" destination="Cr1-cH-YV7" id="8Rc-0E-B89"/>
+                <outlet property="lineaSuperior" destination="euT-hM-NrC" id="wQt-iT-u6Y"/>
+                <outlet property="nota1" destination="0Dc-Yl-z6k" id="Lpi-z7-8Ei"/>
+                <outlet property="typeDateSelector" destination="JzU-z7-eJb" id="nbq-lj-bEZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="460"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euT-hM-NrC">
+                    <rect key="frame" x="10" y="5" width="355" height="2"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="FjW-K2-OK0"/>
+                    </constraints>
+                </view>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qH9-1L-kKs">
+                    <rect key="frame" x="10" y="65" width="355" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="xCN-nt-W10"/>
+                    </constraints>
+                    <segments>
+                        <segment title="1 Mes"/>
+                        <segment title="3 Meses"/>
+                        <segment title="6 Meses"/>
+                        <segment title="1 Año"/>
+                    </segments>
+                    <connections>
+                        <action selector="actualizarFechaLlamado:" destination="-1" eventType="valueChanged" id="KfG-KQ-cw6"/>
+                    </connections>
+                </segmentedControl>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yWy-5L-R9h">
+                    <rect key="frame" x="10" y="103" width="355" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="ekD-R8-H2L"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Colones"/>
+                        <segment title="Dólares"/>
+                    </segments>
+                    <connections>
+                        <action selector="actualizarMoneda:" destination="-1" eventType="valueChanged" id="x2T-aA-UmM"/>
+                    </connections>
+                </segmentedControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cr1-cH-YV7" customClass="BEMSimpleLineGraphView">
+                    <rect key="frame" x="0.0" y="146" width="375" height="280"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="wn8-2e-ccq"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datos en millones" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dc-Yl-z6k">
+                    <rect key="frame" x="10" y="426" width="355" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="wWv-3c-EZc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JzU-z7-eJb">
+                    <rect key="frame" x="10" y="27" width="355" height="29"/>
+                    <segments>
+                        <segment title="Por período"/>
+                        <segment title="Por rango"/>
+                    </segments>
+                    <connections>
+                        <action selector="actualizarFormaFecha:" destination="-1" eventType="valueChanged" id="OMq-Ll-1Dc"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yWy-5L-R9h" firstAttribute="top" secondItem="qH9-1L-kKs" secondAttribute="bottom" constant="10" id="2le-se-GgL"/>
+                <constraint firstAttribute="trailing" secondItem="0Dc-Yl-z6k" secondAttribute="trailing" constant="10" id="2zR-jZ-azP"/>
+                <constraint firstAttribute="trailing" secondItem="qH9-1L-kKs" secondAttribute="trailing" constant="10" id="39c-ny-kNl"/>
+                <constraint firstAttribute="trailing" secondItem="euT-hM-NrC" secondAttribute="trailing" constant="10" id="4iC-e7-LDu"/>
+                <constraint firstItem="euT-hM-NrC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="6Mk-hX-JWr"/>
+                <constraint firstItem="qH9-1L-kKs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="734-d8-aqu"/>
+                <constraint firstItem="JzU-z7-eJb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="BnX-az-fAf"/>
+                <constraint firstItem="0Dc-Yl-z6k" firstAttribute="top" secondItem="Cr1-cH-YV7" secondAttribute="bottom" id="G5N-DK-2BF"/>
+                <constraint firstAttribute="trailing" secondItem="Cr1-cH-YV7" secondAttribute="trailing" id="HDw-I9-4NH"/>
+                <constraint firstAttribute="trailing" secondItem="yWy-5L-R9h" secondAttribute="trailing" constant="10" id="J8M-gu-aeu"/>
+                <constraint firstAttribute="trailing" secondItem="JzU-z7-eJb" secondAttribute="trailing" constant="10" id="PCh-z0-nbr"/>
+                <constraint firstItem="JzU-z7-eJb" firstAttribute="top" secondItem="euT-hM-NrC" secondAttribute="bottom" constant="20" id="U10-cr-E0b"/>
+                <constraint firstItem="0Dc-Yl-z6k" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="X8W-zm-veC"/>
+                <constraint firstItem="euT-hM-NrC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="abO-Dk-pGf"/>
+                <constraint firstItem="qH9-1L-kKs" firstAttribute="top" secondItem="JzU-z7-eJb" secondAttribute="bottom" constant="10" id="td7-bD-f1r"/>
+                <constraint firstItem="Cr1-cH-YV7" firstAttribute="top" secondItem="yWy-5L-R9h" secondAttribute="bottom" constant="15" id="uhR-nA-PFL"/>
+                <constraint firstItem="Cr1-cH-YV7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xzx-IZ-hj7"/>
+                <constraint firstItem="yWy-5L-R9h" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="zr8-Tb-eiN"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-132.5" y="38"/>
+        </view>
+    </objects>
+</document>

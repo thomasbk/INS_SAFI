@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="sFechaGrafico_iphone">
+            <connections>
+                <outlet property="seleccionarFecha" destination="VEp-Kt-n1V" id="PKD-ld-VXW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEp-Kt-n1V">
+                    <rect key="frame" x="15" y="10" width="290" height="32"/>
+                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="S2C-aK-Lgm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" title="Seleccionar fecha ">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="clicSeleccionar:" destination="-1" eventType="touchUpInside" id="Meu-FM-nbj"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flecha_blanca_p" translatesAutoresizingMaskIntoConstraints="NO" id="01d-Fg-Zkc">
+                    <rect key="frame" x="280" y="18" width="10" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="10" id="CWX-qN-1wq"/>
+                        <constraint firstAttribute="height" constant="17" id="I4u-bB-UTg"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="01d-Fg-Zkc" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="1J4-dd-NLQ"/>
+                <constraint firstItem="VEp-Kt-n1V" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="5df-dH-eXA"/>
+                <constraint firstAttribute="trailing" secondItem="01d-Fg-Zkc" secondAttribute="trailing" constant="30" id="6iw-P9-04a"/>
+                <constraint firstAttribute="trailing" secondItem="VEp-Kt-n1V" secondAttribute="trailing" constant="15" id="Aq7-fc-14Z"/>
+                <constraint firstItem="VEp-Kt-n1V" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="I3A-QG-S7U"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="flecha_blanca_p" width="10" height="17"/>
+    </resources>
+</document>
